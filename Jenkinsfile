@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'python app.py &>/dev/null &'
+                sh 'sh app.sh'
             }
         
             post {
