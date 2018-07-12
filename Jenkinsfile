@@ -6,7 +6,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'sh app.sh'
+                
+             withEnv(['JENKINS_NODE_COOKIE=dontkill']) {
+                    sh 'nohup python app.py &'
+                } 
             }
         
             post {
