@@ -24,9 +24,6 @@ def signUp():
     else:
         return json.dumps({'html':'<span> Enter the required field</span>'})
 
-@app.route('/incidentManagement')
-def incidentManagement():
-    return render_template('incidentManagement.html')
 
 
 @app.route('/incidents')
